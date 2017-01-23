@@ -1,8 +1,8 @@
 {
-  "name": "MobixJSUI",
-  "version": "0.8.5",
+  "name": "mbx-react-scripts",
+  "version": "0.1.0",
   "description": "Configuration and scripts for Create React App.",
-  "repository": "facebookincubator/create-react-app",
+  "repository": "gkedge/react-scripts",
   "license": "BSD-3-Clause",
   "engines": {
     "node": ">=4"
@@ -20,7 +20,7 @@
     "utils"
   ],
   "bin": {
-    "react-scripts": "./bin/react-scripts.js"
+    "react-scripts": "./bin/mbx-react-scripts.js"
   },
   "dependencies": {
     "autoprefixer": "6.5.1",
