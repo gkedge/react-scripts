@@ -1,5 +1,5 @@
 {
-  "name": "mbx-react-scripts",
+  "name": "react-scripts",
   "version": "0.1.0",
   "description": "Configuration and scripts for Create React App.",
   "repository": "gkedge/react-scripts",
@@ -20,7 +20,7 @@
     "utils"
   ],
   "bin": {
-    "react-scripts": "./bin/mbx-react-scripts.js"
+    "react-scripts": "./bin/react-scripts.js"
   },
   "dependencies": {
     "autoprefixer": "6.5.1",
