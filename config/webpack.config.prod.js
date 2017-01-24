@@ -134,9 +134,9 @@ module.exports = {
       // assets smaller than specified size as data URLs to avoid requests.
       {
         exclude: [
-          /\.html$/,
+          /\.(html$|xhtml$)/,
           /\.(js|jsx)$/,
-          /\.css$/,
+          /\.(css|scss)$/,
           /\.json$/,
           /\.svg$/
         ],
@@ -157,6 +157,11 @@ module.exports = {
           presets: [require.resolve('babel-preset-react-app')],
         },
         // @remove-on-eject-end
+      },
+      {
+          test:    /\.sass$/,
+          include: paths.appSrc,
+          loaders: ["style", "css", "sass"]
       },
       // The notation here is somewhat confusing.
       // "postcss" loader applies autoprefixer to our CSS.
@@ -223,8 +228,10 @@ module.exports = {
     }),
     // Generates an `index.html` file with the <script> injected.
     new HtmlWebpackPlugin({
-      inject: true,
+      inject:   'body',
       template: paths.appHtml,
+      filename: paths.appBuildHtml,
+      xhtml:    true,
       minify: {
         removeComments: true,
         collapseWhitespace: true,
